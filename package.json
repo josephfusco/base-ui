@@ -1,6 +1,6 @@
 {
   "name": "@josephfusco/base-ui",
-  "private": true,
+  "version": "1.0.0",
   "repository": {
     "type": "git",
     "url": "https://github.com/josephfusco/base-ui.git"
