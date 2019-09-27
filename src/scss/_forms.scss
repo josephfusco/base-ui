@@ -14,11 +14,17 @@
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 
   &:focus {
-    color: #495057;
+    color: v('body-text-color');
     background-color: #fff;
     border-color: #80bdff;
     outline: 0;
     box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+  }
+
+  &:disabled,
+  &[readonly] {
+    background-color: #e9ecef;
+    opacity: 1;
   }
 
   @include placeholder {
@@ -29,9 +35,4 @@
 
 .form-control {
   @extend %form-control;
-}
-
-.form-control:disabled, .form-control[readonly] {
-  background-color: #e9ecef;
-  opacity: 1;
 }
