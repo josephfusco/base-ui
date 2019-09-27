@@ -1,7 +1,7 @@
-import { create } from "@storybook/theming";
+import { create } from '@storybook/theming';
 
 export default create({
-  base: "dark",
-  brandTitle: "MDL",
-  brandUrl: "https://github.com/masonitedoors/MDL"
+  base: 'dark',
+  brandTitle: 'Base UI',
+  brandUrl: 'https://github.com/josephfusco/base-ui',
 });
