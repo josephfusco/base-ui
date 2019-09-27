@@ -1,0 +1,32 @@
+/// Dynamically generate css vars from $theme map.
+///
+/// @param {map} $map - The theme map to generate css variables for.
+/// @param {map} $default-map [$theme] - The default theme used to fill in missing keys.
+///
+/// @output List of css variables with their values.
+///
+@mixin make-css-vars($map, $default-map: $theme) {
+  // Default any missing keys to their original values within the default map.
+  $merged-map: map-merge($default-map, $map);
+
+  @each $name, $value in $merged-map {
+    --#{$css-var-prefix}-#{$name}: #{$value};
+  }
+}
+
+/// Output css variables by their theme map key.
+///
+/// @param {map} $key - The theme map key.
+/// @param {string} $fallback [null] - The css variable fallback.
+///
+/// @output The property value consisting of our css variable.
+///
+@function v($key, $fallback: null) {
+  // https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties#Custom_property_fallback_values
+  @if ($fallback) {
+    @return var(--#{$css-var-prefix}-#{$key}, #{$fallback});
+  }
+  @else {
+    @return var(--#{$css-var-prefix}-#{$key});
+  }
+}

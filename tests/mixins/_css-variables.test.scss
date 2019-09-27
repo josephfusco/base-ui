@@ -1,0 +1,78 @@
+@include describe('@mixin make-css-vars') {
+  @include it('should generate list of css vars') {
+    $default-theme: (
+      'body-font-family': sans-serif,
+      'body-bg-color': white,
+      'body-text-color': black,
+      'link-color': blue
+    );
+
+    $mock-theme: (
+      'body-bg-color': black,
+      'body-text-color': white,
+      'link-color': lightblue
+    );
+
+    @include assert {
+      @include output {
+        // Explicitly setting 2nd argument to avoid testing with live values that could change.
+        :root {
+          @include make-css-vars($default-theme, $default-theme);
+        }
+
+        [data-theme='mock'] {
+          @include make-css-vars($mock-theme, $default-theme);
+        }
+      }
+
+      @include expect {
+        :root {
+          --mdl-body-font-family: sans-serif;
+          --mdl-body-bg-color: white;
+          --mdl-body-text-color: black;
+          --mdl-link-color: blue;
+        }
+
+        [data-theme='mock'] {
+          --mdl-body-font-family: sans-serif;
+          --mdl-body-bg-color: black;
+          --mdl-body-text-color: white;
+          --mdl-link-color: lightblue;
+        }
+      }
+    }
+  }
+}
+
+@include describe('@function v') {
+  @include it('should output single css variable when only key is passed') {
+    @include assert {
+      @include output {
+        a {
+          color: v('link-color');
+        }
+      }
+
+      @include expect {
+        a {
+          color: var(--mdl-link-color);
+        }
+      }
+    }
+  }
+  @include it('should output single css variable with fallback when key & fallback are defined') {
+    @include assert {
+      @include output {
+        a {
+          color: v('link-color', blue);
+        }
+      }
+
+      @include expect {
+        a {
+          color: var(--mdl-link-color, blue);
+        }
+      }
+    }
+  }
+}

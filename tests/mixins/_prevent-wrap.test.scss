@@ -1,0 +1,15 @@
+@include describe('@mixin prevent-wrap') {
+  @include it('should add white-space, overflow, & ellipsis properties') {
+    @include assert {
+      @include output {
+        @include prevent-wrap();
+      }
+
+      @include expect {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+    }
+  }
+}

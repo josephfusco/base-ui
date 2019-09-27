@@ -1,0 +1,138 @@
+// Options
+//
+// Configurable developer options when importing MDL SCSS.
+
+$import-font: true !default;
+$css-var-prefix: 'mdl' !default;
+
+// Colors
+
+$color-limerick: #99c221;
+$color-deepgrey: #53565a;
+$color-slategrey: #7c878e;
+$color-khaki: #b8b298;
+$color-silver: #ddd;
+$color-burntorange: #c33;
+$color-teal: #069;
+$color-aqua: #0097a9;
+$color-islandblue: #369;
+$color-burgundy: #7e2d40;
+$color-night: #000;
+$color-onyx: #343639;
+$color-blackolive: #393c40;
+$color-pastelgrey: #ccc;
+$color-grey: #f3f3f3;
+$color-snow: #fafafa;
+$color-white: #fff;
+$color-blue: #5188f3;
+$color-blueberry: #4d82e9;
+$color-outerspace: #4b4b4b;
+$color-rust: #d11818;
+$color-taupegrey: #938b82;
+$color-deepblend: linear-gradient(0deg, $color-blackolive 0%, $color-deepgrey 100%);
+
+// Theme assignments
+
+$theme: (
+  'body-bg-color': $color-white,
+  'body-text-color': $color-deepgrey,
+  'heading-color': $color-night,
+  'p-color': $color-deepgrey,
+  'link-color': $color-blue,
+  'link-hover-color': $color-blue,
+  'caption-color': $color-slategrey,
+  'webkit-tap-highlight-color': rgba($color-night, 0),
+  'btn-color': $color-deepgrey,
+  'btn-bg-color': $color-snow,
+  'btn-hover-color': $color-deepgrey,
+  'btn-hover-bg-color': $color-snow,
+  'btn-primary-color': $color-deepgrey,
+  'btn-primary-bg-color': $color-limerick,
+  'btn-primary-hover-color': $color-deepgrey,
+  'btn-primary-hover-bg-color': $color-limerick,
+  'btn-secondary-color': $color-white,
+  'btn-secondary-bg-color': $color-deepgrey,
+  'btn-secondary-hover-color': $color-white,
+  'btn-secondary-hover-bg-color': $color-deepgrey
+);
+
+$dark-theme: (
+  'body-bg-color': $color-onyx,
+  'body-text-color': $color-snow,
+  'heading-color': $color-pastelgrey,
+  'p-color': $color-pastelgrey,
+  'link-color': $color-blue,
+  'link-hover-color': $color-blue,
+  'caption-color': $color-snow,
+  'webkit-tap-highlight-color': rgba($color-night, 0),
+  'btn-color': $color-deepgrey,
+  'btn-bg-color': $color-snow,
+  'btn-hover-color': $color-deepgrey,
+  'btn-hover-bg-color': $color-snow,
+  'btn-primary-color': $color-deepgrey,
+  'btn-primary-bg-color': $color-snow,
+  'btn-primary-hover-color': $color-deepgrey,
+  'btn-primary-hover-bg-color': $color-limerick,
+  'btn-secondary-color': $color-white,
+  'btn-secondary-bg-color': $color-deepgrey,
+  'btn-secondary-hover-color': $color-white,
+  'btn-secondary-hover-bg-color': $color-deepgrey
+);
+
+// Spacing
+
+$spacer-xxs: 4px;
+$spacer-xs: 8px;
+$spacer-s: 16px;
+$spacer-m: 24px;
+$spacer-l: 36px;
+$spacer-xl: 48px;
+$spacer-xxl: 104px;
+
+// Typography
+
+$font-url: 'https://cloud.typography.com/7038756/6738972/css/fonts.css';
+$font-family-base: 'Gotham SSm A', 'Gotham SSm B', -apple-system, BlinkMacSystemFont, 'Segoe UI',
+  Helvetica, Arial, sans-serif;
+$font-family-monospace: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace;
+
+// Grid breakpoints
+//
+// Define the minimum dimensions at which your layout will change,
+// adapting to different screen sizes, for use in media queries.
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
+);
+
+@include _assert-ascending($grid-breakpoints, '$grid-breakpoints');
+@include _assert-starts-at-zero($grid-breakpoints, '$grid-breakpoints');
+
+// Grid containers
+//
+// Define the maximum width of `.container` for different screen sizes.
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px
+);
+
+@include _assert-ascending($container-max-widths, '$container-max-widths');
+
+// Grid columns
+//
+// Set the number of columns and specify the width of the gutters.
+
+$grid-columns: 12;
+$grid-gutter-width: 30px;
+$grid-row-columns: 6;
+
+// Container padding
+
+$container-padding-x: $grid-gutter-width / 2 !default;

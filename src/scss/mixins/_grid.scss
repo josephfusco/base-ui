@@ -1,0 +1,164 @@
+/// Create the values for the container.
+///
+/// @param {number} $padding-x [$container-padding-x] The left & right padding.
+///
+/// @output The container properties & their values.
+///
+@mixin make-container($padding-x: $container-padding-x) {
+  width: 100%;
+  padding-right: $padding-x;
+  padding-left: $padding-x;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/// For each breakpoint, define the maximum width of the container in a media query.
+///
+/// @param {map} $max-widths [$container-max-widths] The max width of the container at a specific size.
+/// @param {map} $breakpoints [$grid-breakpoints] The viewport widths for each breakpoint.
+///
+/// @output The max-width for a container.
+///
+@mixin make-container-max-widths(
+  $max-widths: $container-max-widths,
+  $breakpoints: $grid-breakpoints
+) {
+  @each $breakpoint, $container-max-width in $max-widths {
+    @include media-breakpoint-up($breakpoint, $breakpoints) {
+      max-width: $container-max-width;
+    }
+  }
+}
+
+/// Creates the row values based off the gutter size.
+///
+/// @param {number} $gutter [$grid-gutter-width] The gutter width.
+///
+/// @output The row properties & their values.
+///
+@mixin make-row($gutter: $grid-gutter-width) {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -$gutter / 2;
+  margin-left: -$gutter / 2;
+}
+
+/// Creates the column vaules.
+///
+/// @param {number} $size The column size used in calculating length percentages.
+/// @param {number} $columns [$grid-columns] The total number of columns for our grid.
+///
+/// @output The column properties & their values.
+///
+@mixin make-col($size, $columns: $grid-columns) {
+  flex: 0 0 percentage($size / $columns);
+  // Add a `max-width` to ensure content within each column does not blow out
+  // the width of the column. Applies to IE10+ and Firefox. Chrome and Safari
+  // do not appear to require this.
+  max-width: percentage($size / $columns);
+}
+
+/// Creates the column offset values.
+///
+/// @param {number} $size The column size used in calculating length percentages.
+/// @param {number} $columns [$grid-columns] The total number of columns for our grid.
+///
+/// @output The column offset properties & their values.
+///
+@mixin make-col-offset($size, $columns: $grid-columns) {
+  $num: $size / $columns;
+  margin-left: if($num == 0, 0, percentage($num));
+}
+
+/// Creates the row column values.
+///
+/// Specify on a parent element(e.g., .row) to force immediate children into NN
+/// numberof columns. Supports wrapping to new lines, but does not do a Masonry
+/// style grid.
+///
+/// @param {number} $count The count for the number of columns.
+///
+/// @output Additional properties & values for handling columns within rows.
+///
+@mixin row-cols($count) {
+  & > * {
+    flex: 0 0 100% / $count;
+    max-width: 100% / $count;
+  }
+}
+
+/// Used only to generate the correct number of grid classes given
+/// any value of `$grid-columns`.
+///
+/// @param {number} $columns [$grid-columns] - The number of grid columns.
+/// @param {number} $gutter [$grid-gutter-width] - The width of the gutter between grid columns.
+/// @param {map} $breakpoints [$grid-breakpoints] - The map defining our breakpoints.
+///
+/// @output The grid classes.
+///
+@mixin make-grid-columns(
+  $columns: $grid-columns,
+  $gutter: $grid-gutter-width,
+  $breakpoints: $grid-breakpoints
+) {
+  // Common properties for all breakpoints
+  %grid-column {
+    position: relative;
+    width: 100%;
+    padding-right: $gutter / 2;
+    padding-left: $gutter / 2;
+  }
+
+  @each $breakpoint in map-keys($breakpoints) {
+    $infix: breakpoint-infix($breakpoint, $breakpoints);
+
+    // Allow columns to stretch full width below their breakpoints
+    @for $i from 1 through $columns {
+      .col#{$infix}-#{$i} {
+        @extend %grid-column;
+      }
+    }
+
+    .col#{$infix},
+    .col#{$infix}-auto {
+      @extend %grid-column;
+    }
+
+    @include media-breakpoint-up($breakpoint, $breakpoints) {
+      // Provide basic `.col-{bp}` classes for equal-width flexbox columns
+      .col#{$infix} {
+        flex-basis: 0;
+        flex-grow: 1;
+        max-width: 100%;
+      }
+
+      @for $i from 1 through $grid-row-columns {
+        .row-cols#{$infix}-#{$i} {
+          @include row-cols($i);
+        }
+      }
+
+      .col#{$infix}-auto {
+        flex: 0 0 auto;
+        width: auto;
+        max-width: 100%; // Reset earlier grid tiers
+      }
+
+      @for $i from 1 through $columns {
+        .col#{$infix}-#{$i} {
+          @include make-col($i, $columns);
+        }
+      }
+
+      // `$columns - 1` because offsetting by the width of an entire row isn't possible
+      @for $i from 0 through ($columns - 1) {
+        @if not($infix == '' and $i == 0) {
+          // Avoid emitting useless .offset-0
+          .offset#{$infix}-#{$i} {
+            @include make-col-offset($i, $columns);
+          }
+        }
+      }
+    }
+  }
+}

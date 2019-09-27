@@ -1,0 +1,9 @@
+// Define our CSS variables.
+:root {
+  @include make-css-vars($theme);
+}
+
+// Define our CSS variables for the future dark mode.
+[data-theme='dark'] {
+  @include make-css-vars($dark-theme);
+}

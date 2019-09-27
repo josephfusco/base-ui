@@ -1,0 +1,61 @@
+{
+  "name": "@josephfusco/base-ui",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/josephfusco/base-ui.git"
+  },
+  "license": "Apache-2.0",
+  "contributors": [
+    {
+      "name": "Joseph Fusco",
+      "email": "hello@josephfus.co",
+      "url": "https://github.com/josephfusco"
+    }
+  ],
+  "main": "index.js",
+  "scripts": {
+    "build": "npm run build:styles && npm run build:styles:min && npm run build:storybook",
+    "build:storybook": "cross-env NODE_ENV=production build-storybook -c .storybook",
+    "build:styles": "cross-env NODE_ENV=production node-sass src/scss/base-ui.scss dist/base-ui.css --output-style expanded",
+    "build:styles:min": "cross-env NODE_ENV=production node-sass src/scss/base-ui.scss dist/base-ui.min.css --output-style compressed",
+    "prestart": "npm install",
+    "start": "npm run storybook",
+    "storybook": "start-storybook",
+    "test": "jest"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.css": "stylelint",
+    "*.scss": "stylelint --syntax=scss",
+    "package.json": "sort-package-json"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.6.0",
+    "@masonite/eslint-config": "0.0.13",
+    "@masonite/stylelint-config": "^1.4.0",
+    "@storybook/addon-a11y": "^5.2.1",
+    "@storybook/addon-knobs": "^5.2.1",
+    "@storybook/html": "^5.2.1",
+    "babel-loader": "^8.0.6",
+    "cross-env": "^6.0.0",
+    "husky": "^3.0.5",
+    "jest": "^24.9.0",
+    "lint-staged": "^9.3.0",
+    "node-sass": "^4.12.0",
+    "sass-loader": "^8.0.0",
+    "sass-true": "^5.0.0",
+    "sort-package-json": "^1.22.1",
+    "stylelint": "^11.0.0",
+    "stylelint-config-recommended": "^3.0.0",
+    "stylelint-scss": "^3.11.0"
+  },
+  "engines": {
+    "node": ">=8",
+    "npm": ">=5"
+  }
+}

@@ -1,0 +1,11 @@
+/// Prevent text from wrapping.
+///
+@mixin prevent-wrap {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+%prevent-wrap {
+  @include prevent-wrap;
+}
