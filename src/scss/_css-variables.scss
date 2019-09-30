@@ -1,51 +1,7 @@
-// Define our base CSS variables.
 :root {
-  // States
-  --mdl-state-color-info: #{$color-science-blue};
-  --mdl-state-color-success: #{$color-limerick};
-  --mdl-state-color-warning: #{$color-goldenrod};
-  --mdl-state-color-error: #{$color-rust};
-
-  // Base
-  --mdl-bg-color: #{$color-white};
-  --mdl-heading-color: #{$color-night};
-  --mdl-text-color: #{$color-deepgrey};
-  --mdl-link-color: #{$color-science-blue};
-  --mdl-link-hover-color: #{$color-science-blue};
-  --mdl-caption-color: #{$color-slategrey};
-
-  // Buttons
-  --mdl-btn-color: #{$color-deepgrey};
-  --mdl-btn-bg-color: #{$color-snow};
-  --mdl-btn-hover-color: #{$color-deepgrey};
-  --mdl-btn-hover-bg-color: #{$color-snow};
-  --mdl-btn-primary-color: #{$color-night};
-  --mdl-btn-primary-bg-color: #{$color-limerick};
-  --mdl-btn-primary-hover-color: #{$color-night};
-  --mdl-btn-primary-hover-bg-color: #{$color-limerick};
-  --mdl-btn-secondary-color: #{$color-white};
-  --mdl-btn-secondary-bg-color: #{$color-deepgrey};
-  --mdl-btn-secondary-hover-color: #{$color-white};
-  --mdl-btn-secondary-hover-bg-color: #{$color-deepgrey};
-
-  // Forms
-  --mdl-form-control-color: #{$color-night};
-  --mdl-form-control-bg-color: #{$color-white};
-  --mdl-form-control-font-size: 14px;
-  --mdl-form-control-height: #{spacer(9)};
-  --mdl-form-control-padding-x: #{spacer(2)};
-  --mdl-form-control-padding-y: #{spacer()};
-  --mdl-form-control-label-color: var(--mdl-text-color);
-  --mdl-form-control-label-font-size: 11px;
-  --mdl-form-control-label-height: 20px;
-
-  // Cards
-  --mdl-card-bg-color: #{$color-white};
-  --mdl-card-box-shadow: 0 2px 22px 0 rgba(0, 0, 0, 0.15);
-  --mdl-card-color: var(--mdl-text-color);
+  @include make-css-vars($root-css-vars);
 }
 
-// Define our CSS variables for the future dark mode.
 [data-theme='dark'] {
-  --mdl-bg-color: #{$color-onyx};
+  @include make-css-vars($dark-mode-css-vars);
 }

@@ -41,6 +41,55 @@ $color-deepblend: linear-gradient(0deg, $color-blackolive 0%, $color-deepgrey 10
 
 $spacer-base: 0.25rem;
 
+// CSS Variables
+//
+// Define our root CSS variables.
+
+$root-css-vars: (
+  --mdl-state-color-info: $color-science-blue,
+  --mdl-state-color-success: color-limerick,
+  --mdl-state-color-warning: color-goldenrod,
+  --mdl-state-color-error: color-rust,
+  --mdl-bg-color: $color-white,
+  --mdl-heading-color: $color-night,
+  --mdl-text-color: $color-deepgrey,
+  --mdl-link-color: $color-science-blue,
+  --mdl-link-hover-color: $color-science-blue,
+  --mdl-caption-color: $color-slategrey,
+  --mdl-btn-color: $color-deepgrey,
+  --mdl-btn-bg-color: $color-snow,
+  --mdl-btn-hover-color: $color-deepgrey,
+  --mdl-btn-hover-bg-color: $color-snow,
+  --mdl-btn-primary-color: $color-night,
+  --mdl-btn-primary-bg-color: $color-limerick,
+  --mdl-btn-primary-hover-color: $color-night,
+  --mdl-btn-primary-hover-bg-color: $color-limerick,
+  --mdl-btn-secondary-color: $color-white,
+  --mdl-btn-secondary-bg-color: $color-deepgrey,
+  --mdl-btn-secondary-hover-color: $color-white,
+  --mdl-btn-secondary-hover-bg-color: $color-deepgrey,
+  --mdl-form-control-color: $color-night,
+  --mdl-form-control-bg-color: $color-white,
+  --mdl-form-control-font-size: 14px,
+  --mdl-form-control-height: spacer(9),
+  --mdl-form-control-padding-x: spacer(2),
+  --mdl-form-control-padding-y: spacer(),
+  --mdl-form-control-label-color: var(--mdl-text-color),
+  --mdl-form-control-label-font-size: 11px,
+  --mdl-form-control-label-height: 20px,
+  --mdl-card-bg-color: $color-white,
+  --mdl-card-box-shadow: 0 2px 22px 0 rgba(0, 0, 0, 0.15),
+  --mdl-card-color: var(--mdl-text-color)
+);
+
+// Dark Mode CSS Variables
+//
+// Define our root CSS variables.
+
+$dark-mode-css-vars: (
+  --mdl-bg-color: $color-onyx
+);
+
 // Typography
 //
 // Define our font related vars.

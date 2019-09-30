@@ -1,0 +1,11 @@
+/// Dynamically generate css vars from $theme map.
+///
+/// @param {map} $map - The theme map to generate css variables for.
+///
+/// @output List of css variables with their values.
+///
+@mixin make-css-vars($map) {
+  @each $name, $value in $map {
+    #{$name}: #{$value};
+  }
+}
