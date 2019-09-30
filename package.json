@@ -51,7 +51,9 @@
     "sass-true": "^5.0.0",
     "sort-package-json": "^1.22.1",
     "stylelint": "^11.0.0",
+    "stylelint-config-rational-order": "^0.1.2",
     "stylelint-config-recommended": "^3.0.0",
+    "stylelint-order": "^3.1.1",
     "stylelint-scss": "^3.11.0"
   },
   "engines": {

@@ -6,10 +6,10 @@
 ///
 @mixin make-container($padding-x: $container-padding-x) {
   width: 100%;
-  padding-right: $padding-x;
-  padding-left: $padding-x;
   margin-right: auto;
   margin-left: auto;
+  padding-right: $padding-x;
+  padding-left: $padding-x;
 }
 
 /// For each breakpoint, define the maximum width of the container in a media query.

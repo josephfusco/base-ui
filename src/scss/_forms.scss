@@ -1,20 +1,18 @@
 .form-control {
-  background-clip: padding-box;
-  background-color: var(--mdl-form-control-bg-color);
+  position: relative;
+  display: block;
+  width: 100%;
+  height: var(--mdl-form-control-height);
+  padding: var(--mdl-form-control-padding-y) var(--mdl-form-control-padding-x);
   color: var(--mdl-form-control-color);
-
+  font-size: var(--mdl-form-control-font-size);
+  line-height: 1.5;
+  background-color: var(--mdl-form-control-bg-color);
+  background-clip: padding-box;
   border: 0;
   border-radius: 3px;
-
   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.15);
-  display: block;
-  font-size: var(--mdl-form-control-font-size);
-  height: var(--mdl-form-control-height);
-  line-height: 1.5;
-  padding: var(--mdl-form-control-padding-y) var(--mdl-form-control-padding-x);
-  position: relative;
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-  width: 100%;
   -webkit-appearance: none;
 
   &.-success {
@@ -30,17 +28,17 @@
   position: relative;
 
   &__label {
-    backface-visibility: hidden;
-    color: var(--mdl-form-control-label-color);
-    font-size: var(--mdl-form-control-font-size);
-    height: var(--mdl-form-control-height);
-    left: 0;
-    line-height: 1.5;
-    margin: 0;
-    padding: var(--mdl-form-control-padding-y) var(--mdl-form-control-padding-x);
     position: absolute;
     top: 0;
+    left: 0;
+    height: var(--mdl-form-control-height);
+    margin: 0;
+    padding: var(--mdl-form-control-padding-y) var(--mdl-form-control-padding-x);
+    color: var(--mdl-form-control-label-color);
+    font-size: var(--mdl-form-control-font-size);
+    line-height: 1.5;
     transform-origin: 0 0;
+    backface-visibility: hidden;
     transition: transform 0.25s, opacity 0.25s, padding 0.25s ease-in-out;
     user-select: none;
   }

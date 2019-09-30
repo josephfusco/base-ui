@@ -51,11 +51,11 @@ section {
 
 body {
   margin: 0; // 1
-  font-family: $font-family-base;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 1.8;
   color: var(--mdl-text-color);
+  font-weight: 400;
+  font-size: 14px;
+  font-family: $font-family-base;
+  line-height: 1.8;
   text-align: left; // 3
   background-color: var(--mdl-bg-color); // 2
 }
@@ -101,46 +101,46 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: $font-family-base;
   margin-top: 0;
   margin-bottom: 1rem;
   color: var(--mdl-heading-color);
+  font-family: $font-family-base;
 }
 
 h1 {
-  font-size: 36px;
   font-weight: 700;
+  font-size: 36px;
   line-height: 48px;
 }
 
 h2 {
-  font-size: 24px;
   font-weight: 700;
+  font-size: 24px;
   line-height: 33px;
 }
 
 h3 {
-  font-size: 18px;
   font-weight: 700;
+  font-size: 18px;
   line-height: 25px;
 }
 
 h4 {
-  font-size: 16px;
   font-weight: 700;
+  font-size: 16px;
   line-height: 22px;
 }
 
 h5 {
-  font-size: 14px;
   font-weight: 300;
+  font-size: 14px;
   line-height: 20px;
   text-transform: uppercase;
 }
 
 h6 {
-  font-size: 12px;
   font-weight: 300;
+  font-size: 12px;
   line-height: 17px;
   text-transform: uppercase;
 }
@@ -168,8 +168,8 @@ abbr[data-original-title] {
   // 1
   text-decoration: underline; // 2
   text-decoration: underline dotted; // 2
-  cursor: help; // 3
   border-bottom: 0; // 4
+  cursor: help; // 3
   text-decoration-skip-ink: none; // 5
 }
 
@@ -281,8 +281,8 @@ pre,
 code,
 kbd,
 samp {
-  font-family: $font-family-monospace;
   font-size: 14px; // Correct the odd `em` font sizing in all browsers.
+  font-family: $font-family-monospace;
 }
 
 pre {
@@ -374,8 +374,8 @@ select,
 optgroup,
 textarea {
   margin: 0; // Remove the margin in Firefox and Safari
-  font-family: inherit;
   font-size: inherit;
+  font-family: inherit;
   line-height: inherit;
 }
 
@@ -450,8 +450,8 @@ fieldset {
   // and https://html.spec.whatwg.org/multipage/#the-fieldset-and-legend-elements
   min-width: 0;
   // Reset the default outline behavior of fieldsets so they don't affect page layout.
-  padding: 0;
   margin: 0;
+  padding: 0;
   border: 0;
 }
 
@@ -461,11 +461,11 @@ legend {
   display: block;
   width: 100%;
   max-width: 100%; // 1
-  padding: 0;
   margin-bottom: 0.5rem;
+  padding: 0;
+  color: inherit; // 2
   font-size: 1.5rem;
   line-height: inherit;
-  color: inherit; // 2
   white-space: normal; // 1
 }
 
