@@ -1,6 +1,5 @@
 import path from 'path';
 import { storiesOf } from '@storybook/html';
-import { boolean } from '@storybook/addon-knobs';
 
 // Import our main stylesheet.
 import '../../src/scss/base-ui.scss';
@@ -16,12 +15,6 @@ req.keys().forEach(fileName => {
 
   // Add story.
   storiesOf('Base UI').add(label, () => {
-    const rootEl = document.documentElement;
-
-    // Add knob to toggle "Dark Mode".
-    const darkMode = boolean('Dark Mode', false);
-    darkMode ? rootEl.setAttribute('data-theme', 'dark') : rootEl.setAttribute('data-theme', '');
-
     // Return the HTML for this file.
     return file;
   });

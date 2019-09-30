@@ -30,3 +30,14 @@
     @return var(--#{$css-var-prefix}-#{$key});
   }
 }
+
+/// Set's a css variable value.
+///
+/// @param {map} $key - The theme map key.
+/// @param {string} $value - The css variable value.
+///
+/// @output The css variable with it's new value.
+///
+@mixin set($key, $value) {
+  --#{$css-var-prefix}-#{$key}: #{$value};
+}

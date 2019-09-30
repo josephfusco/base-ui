@@ -39,7 +39,7 @@
     "@masonite/eslint-config": "0.0.13",
     "@masonite/stylelint-config": "^1.4.0",
     "@storybook/addon-a11y": "^5.2.1",
-    "@storybook/addon-knobs": "^5.2.1",
+    "@storybook/addon-backgrounds": "^5.2.1",
     "@storybook/html": "^5.2.1",
     "babel-loader": "^8.0.6",
     "cross-env": "^6.0.0",

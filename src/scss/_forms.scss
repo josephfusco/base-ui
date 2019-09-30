@@ -1,38 +1,50 @@
-%form-control {
+.form-control {
   position: relative;
   display: block;
   width: 100%;
-  height: $spacer-l;
-  padding: $spacer-xxs $spacer-xs;
-  font-size: 1rem;
+  height: v('form-control-height');
+  padding: v('form-control-padding-y') v('form-control-padding-x');
+  font-size: v('form-control-font-size');
   line-height: 1.5;
-  color: v('body-text-color');
-  background-color: #fff;
+  color: v('form-control-color');
+  background-color: v('form-control-bg-color');
   background-clip: padding-box;
-  border: 1px solid #ced4da;
-  border-radius: 0.25rem;
+  border: 0;
+  border-radius: 3px;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.15);
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-
-  &:focus {
-    color: v('body-text-color');
-    background-color: #fff;
-    border-color: #80bdff;
-    outline: 0;
-    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
-  }
-
-  &:disabled,
-  &[readonly] {
-    background-color: #e9ecef;
-    opacity: 1;
-  }
-
-  @include placeholder {
-    color: #6c757d;
-    opacity: 1;
-  }
 }
 
-.form-control {
-  @extend %form-control;
+.floating-label {
+  position: relative;
+
+  &__label {
+    height: v('form-control-height');
+    padding: v('form-control-padding-y') v('form-control-padding-x');
+    font-size: v('form-control-font-size');
+    line-height: 1.5;
+    color: v('form-control-label-color');
+    position: absolute;
+    top: 0;
+    left: 0;
+    user-select: none;
+    transition: transform 0.25s, opacity 0.25s, padding 0.25s ease-in-out;
+    transform-origin: 0 0;
+    margin: 0;
+  }
+
+  &__input {
+    position: relative;
+
+    &:focus,
+    &:not(:placeholder-shown) {
+      box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.15);
+    }
+
+    &:focus + .floating-label__label,
+    &:not(:placeholder-shown) + .floating-label__label {
+      transform: translate(0, -2em) scale(0.7);
+      @include set('form-control-label-color', red);
+    }
+  }
 }
