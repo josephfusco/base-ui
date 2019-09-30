@@ -7,7 +7,7 @@ $import-font: true !default;
 // Colors
 //
 // Define our color names.
-// These should only be used as a value within a theme map.
+// These should never be hardcoded outside of a css variable declaration.
 
 $color-limerick: #99c221;
 $color-deepgrey: #53565a;
@@ -32,6 +32,10 @@ $color-outerspace: #4b4b4b;
 $color-rust: #d11818;
 $color-taupegrey: #938b82;
 $color-deepblend: linear-gradient(0deg, $color-blackolive 0%, $color-deepgrey 100%);
+
+// AAA compliant text colors when against a white background.
+$color-science-blue: #0366d6;
+$color-goldenrod: #edd853;
 
 // Spacing
 //
