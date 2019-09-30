@@ -16,7 +16,7 @@
   -webkit-appearance: none;
 
   &.-success {
-    --mdl-form-control-label-color: green;
+    --mdl-form-control-label-color: $color-limerick;
   }
 
   &.-error {
@@ -32,15 +32,16 @@
     top: 0;
     left: 0;
     height: var(--mdl-form-control-height);
-    margin: 0;
-    padding: var(--mdl-form-control-padding-y) var(--mdl-form-control-padding-x);
+    padding-right: var(--mdl-form-control-padding-x);
+    padding-left: var(--mdl-form-control-padding-x);
     color: var(--mdl-form-control-label-color);
     font-size: var(--mdl-form-control-font-size);
-    line-height: 1.5;
+    line-height: var(--mdl-form-control-height);
+    border: 1px dotted red;
     transform-origin: 0 0;
     backface-visibility: hidden;
     transition: transform 0.25s, opacity 0.25s, padding 0.25s ease-in-out;
-    user-select: none;
+    // pointer-events: none;
   }
 
   &__input {
@@ -53,7 +54,7 @@
 
     &:focus + .floating-label__label,
     &:not(:placeholder-shown) + .floating-label__label {
-      transform: translate(0, -2em) scale(0.7);
+      transform: translate(0, -75%) scale(0.75);
     }
   }
 }
