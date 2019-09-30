@@ -27,10 +27,12 @@
 
 .h5 {
   @extend h5;
+  text-transform: uppercase;
 }
 
 .h6 {
   @extend h6;
+  text-transform: uppercase;
 }
 
 .blockquote {

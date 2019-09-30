@@ -47,11 +47,10 @@ $spacer-base: 0.25rem;
 
 $root-css-vars: (
   --mdl-state-color-info: $color-science-blue,
-  --mdl-state-color-success: color-limerick,
-  --mdl-state-color-warning: color-goldenrod,
-  --mdl-state-color-error: color-rust,
+  --mdl-state-color-success: $color-limerick,
+  --mdl-state-color-warning: $color-goldenrod,
+  --mdl-state-color-error: $color-rust,
   --mdl-bg-color: $color-white,
-  --mdl-heading-color: $color-night,
   --mdl-text-color: $color-deepgrey,
   --mdl-link-color: $color-science-blue,
   --mdl-link-hover-color: $color-science-blue,
@@ -79,7 +78,9 @@ $root-css-vars: (
   --mdl-form-control-label-height: 20px,
   --mdl-card-bg-color: $color-white,
   --mdl-card-box-shadow: 0 2px 22px 0 rgba(0, 0, 0, 0.15),
-  --mdl-card-color: var(--mdl-text-color)
+  --mdl-card-color: var(--mdl-text-color),
+  --mdl-image-overlay-color: $color-white,
+  --mdl-image-overlay-bg-color: rgba($color-night, 0.5)
 );
 
 // Dark Mode CSS Variables

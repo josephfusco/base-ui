@@ -102,8 +102,7 @@ h4,
 h5,
 h6 {
   margin-top: 0;
-  margin-bottom: spacer(4);
-  color: var(--mdl-heading-color);
+  margin-bottom: spacer(3);
   font-family: $font-family-base;
 }
 
@@ -132,17 +131,15 @@ h4 {
 }
 
 h5 {
-  font-weight: 300;
+  font-weight: 400;
   font-size: 14px;
   line-height: 20px;
-  text-transform: uppercase;
 }
 
 h6 {
-  font-weight: 300;
+  font-weight: 400;
   font-size: 12px;
   line-height: 17px;
-  text-transform: uppercase;
 }
 
 // Reset margins on paragraphs
