@@ -38,6 +38,11 @@
   --mdl-form-control-label-color: var(--mdl-text-color);
   --mdl-form-control-label-font-size: 11px;
   --mdl-form-control-label-height: 20px;
+
+  // Cards
+  --mdl-card-bg-color: #{$color-white};
+  --mdl-card-box-shadow: 0 2px 22px 0 rgba(0, 0, 0, 0.15);
+  --mdl-card-color: var(--mdl-text-color);
 }
 
 // Define our CSS variables for the future dark mode.

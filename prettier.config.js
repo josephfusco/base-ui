@@ -4,10 +4,4 @@ module.exports = {
   bracketSpacing: true,
   trailingComma: 'es5',
   singleQuote: true,
-  overrides: [
-    {
-      files: '*.html',
-      options: { parser: 'babel' },
-    },
-  ],
 };
