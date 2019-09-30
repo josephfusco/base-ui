@@ -1,8 +1,8 @@
-module.exports = {
+{
   extends: '@masonite/stylelint-config',
   plugins: [
     'stylelint-order',
-    'stylelint-config-rational-order/plugin', // remove to keep only alpha sort
+    'stylelint-config-rational-order/plugin',
   ],
   rules: {
     'scss/dollar-variable-colon-space-after': 'at-least-one-space',
@@ -16,4 +16,4 @@ module.exports = {
       },
     ],
   },
-};
+}
