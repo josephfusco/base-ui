@@ -1,8 +1,8 @@
-@include describe('@mixin prevent-wrap') {
+@include describe('@mixin truncate') {
   @include it('should add white-space, overflow, & ellipsis properties') {
     @include assert {
       @include output {
-        @include prevent-wrap();
+        @include truncate();
       }
 
       @include expect {

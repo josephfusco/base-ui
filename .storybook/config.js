@@ -13,13 +13,13 @@ addParameters({
 addParameters({
   backgrounds: [
     {
-      name: 'white',
-      value: '#FFFFFF',
+      name: 'gray',
+      value: '#F3F3F3',
       default: true,
     },
     {
-      name: 'gray',
-      value: '#F3F3F3',
+      name: 'white',
+      value: '#FFFFFF',
     },
   ],
 });

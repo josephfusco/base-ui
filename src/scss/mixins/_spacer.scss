@@ -1,0 +1,7 @@
+/// Spacing multiplier.
+///
+/// @param {length} $size [1] - multiplier value.
+///
+@function spacer($size: 1) {
+    @return ($size * $spacer-base);
+}

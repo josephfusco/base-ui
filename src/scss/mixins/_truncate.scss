@@ -1,11 +1,11 @@
 /// Prevent text from wrapping.
 ///
-@mixin prevent-wrap {
+@mixin truncate {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
-%prevent-wrap {
-  @include prevent-wrap;
+%truncate {
+  @include truncate;
 }

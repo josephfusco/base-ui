@@ -15,10 +15,10 @@
   ],
   "main": "index.js",
   "scripts": {
-    "build": "npm run build:styles && npm run build:styles:min && npm run build:storybook",
+    "build": "npm run build:css && npm run build:css:min && npm run build:storybook",
     "build:storybook": "cross-env NODE_ENV=production build-storybook -c .storybook",
-    "build:styles": "cross-env NODE_ENV=production node-sass src/scss/base-ui.scss dist/base-ui.css --output-style expanded",
-    "build:styles:min": "cross-env NODE_ENV=production node-sass src/scss/base-ui.scss dist/base-ui.min.css --output-style compressed",
+    "build:css": "cross-env NODE_ENV=production node-sass src/scss/base-ui.scss dist/base-ui.css --output-style expanded",
+    "build:css:min": "cross-env NODE_ENV=production node-sass src/scss/base-ui.scss dist/base-ui.min.css --output-style compressed",
     "prestart": "npm install",
     "start": "npm run storybook",
     "storybook": "start-storybook",
@@ -30,8 +30,8 @@
     }
   },
   "lint-staged": {
-    "*.css": "stylelint",
-    "*.scss": "stylelint --syntax=scss",
+    "*.css": "stylelint --fix",
+    "*.scss": "stylelint --syntax=scss --fix",
     "package.json": "sort-package-json"
   },
   "devDependencies": {
