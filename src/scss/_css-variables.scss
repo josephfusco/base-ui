@@ -1,11 +1,17 @@
 // Define our base CSS variables.
 :root {
+  // States
+  --mdl-state-color-info: #{$color-science-blue};
+  --mdl-state-color-success: #{$color-limerick};
+  --mdl-state-color-warning: #{$color-goldenrod};
+  --mdl-state-color-error: #{$color-rust};
+
   // Base
   --mdl-bg-color: #{$color-white};
   --mdl-heading-color: #{$color-night};
   --mdl-text-color: #{$color-deepgrey};
-  --mdl-link-color: #{$color-blue};
-  --mdl-link-hover-color: #{$color-blue};
+  --mdl-link-color: #{$color-science-blue};
+  --mdl-link-hover-color: #{$color-science-blue};
   --mdl-caption-color: #{$color-slategrey};
 
   // Buttons
@@ -26,10 +32,12 @@
   --mdl-form-control-color: #{$color-night};
   --mdl-form-control-bg-color: #{$color-white};
   --mdl-form-control-font-size: 14px;
-  --mdl-form-control-label-font-size: 10px;
   --mdl-form-control-height: #{spacer(9)};
   --mdl-form-control-padding-x: #{spacer(2)};
   --mdl-form-control-padding-y: #{spacer()};
+  --mdl-form-control-label-color: var(--mdl-text-color);
+  --mdl-form-control-label-font-size: 11px;
+  --mdl-form-control-label-height: 20px;
 }
 
 // Define our CSS variables for the future dark mode.

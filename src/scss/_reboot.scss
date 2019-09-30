@@ -102,7 +102,7 @@ h4,
 h5,
 h6 {
   margin-top: 0;
-  margin-bottom: 1rem;
+  margin-bottom: spacer(4);
   color: var(--mdl-heading-color);
   font-family: $font-family-base;
 }
@@ -152,7 +152,7 @@ h6 {
 
 p {
   margin-top: 0;
-  margin-bottom: 1rem;
+  margin-bottom: spacer(4);
 }
 
 // Abbreviations
@@ -174,7 +174,7 @@ abbr[data-original-title] {
 }
 
 address {
-  margin-bottom: 1rem;
+  margin-bottom: spacer(4);
   font-style: normal;
   line-height: inherit;
 }
@@ -183,7 +183,7 @@ ol,
 ul,
 dl {
   margin-top: 0;
-  margin-bottom: 1rem;
+  margin-bottom: spacer(4);
 }
 
 ol ol,
@@ -198,12 +198,12 @@ dt {
 }
 
 dd {
-  margin-bottom: 0.5rem;
+  margin-bottom: spacer(2);
   margin-left: 0; // Undo browser default
 }
 
 blockquote {
-  margin: 0 0 1rem;
+  margin: 0 0 spacer(4);
 }
 
 b,
@@ -289,7 +289,7 @@ pre {
   // Remove browser default top margin
   margin-top: 0;
   // Reset browser default of `1em` to use `rem`s
-  margin-bottom: 1rem;
+  margin-bottom: spacer(4);
   // Don't allow content to break outside
   overflow: auto;
 }
@@ -300,7 +300,7 @@ pre {
 
 figure {
   // Apply a consistent margin strategy (matches our type styles).
-  margin: 0 0 1rem;
+  margin: 0 0 spacer(4);
 }
 
 //
@@ -328,8 +328,8 @@ table {
 }
 
 caption {
-  padding-top: 0.75rem;
-  padding-bottom: 0.75rem;
+  padding-top: spacer(3);
+  padding-bottom: spacer(3);
   color: var(--mdl-caption-color);
   text-align: left;
   caption-side: bottom;
@@ -348,7 +348,7 @@ th {
 label {
   // Allow labels to use `margin` for spacing.
   display: inline-block;
-  margin-bottom: 0.5rem;
+  margin-bottom: spacer(2);
 }
 
 // Remove the default `border-radius` that macOS Chrome adds.
@@ -461,10 +461,10 @@ legend {
   display: block;
   width: 100%;
   max-width: 100%; // 1
-  margin-bottom: 0.5rem;
+  margin-bottom: spacer(2);
   padding: 0;
   color: inherit; // 2
-  font-size: 1.5rem;
+  font-size: spacer(6);
   line-height: inherit;
   white-space: normal; // 1
 }
