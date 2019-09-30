@@ -16,9 +16,9 @@
   "main": "index.js",
   "scripts": {
     "build": "npm run build:css && npm run build:css:min && npm run build:storybook",
-    "build:storybook": "cross-env NODE_ENV=production build-storybook -c .storybook",
     "build:css": "cross-env NODE_ENV=production node-sass src/scss/base-ui.scss dist/base-ui.css --output-style expanded",
     "build:css:min": "cross-env NODE_ENV=production node-sass src/scss/base-ui.scss dist/base-ui.min.css --output-style compressed",
+    "build:storybook": "cross-env NODE_ENV=production build-storybook -c .storybook",
     "prestart": "npm install",
     "start": "npm run storybook",
     "storybook": "start-storybook",
