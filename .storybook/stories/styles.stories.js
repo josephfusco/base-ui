@@ -14,7 +14,7 @@ req.keys().forEach(fileName => {
   const label = camelCaseToTitleCase(path.basename(fileName, '.html'));
 
   // Add story.
-  storiesOf('Base UI').add(label, () => {
+  storiesOf('Base UI', module).add(label, () => {
     // Return the HTML for this file.
     return file;
   });
