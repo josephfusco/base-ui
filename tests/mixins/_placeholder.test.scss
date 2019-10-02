@@ -6,7 +6,7 @@
           @include placeholder {
             color: red;
             opacity: 0.5;
-          };
+          }
         }
       }
 
@@ -16,22 +16,22 @@
           opacity: 0.5;
         }
 
-        div:-moz-placeholder {
-          color: red;
-          opacity: 0.5;
-        }
-
         div::-moz-placeholder {
           color: red;
           opacity: 0.5;
         }
 
-        div:-ms-input-placeholder {
+        div::-ms-input-placeholder {
           color: red;
           opacity: 0.5;
         }
 
-        div::-ms-input-placeholder {
+        div:-moz-placeholder {
+          color: red;
+          opacity: 0.5;
+        }
+
+        div:-ms-input-placeholder {
           color: red;
           opacity: 0.5;
         }
