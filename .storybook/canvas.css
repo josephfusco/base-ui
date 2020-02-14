@@ -1,9 +1,0 @@
-/* Add some spacing so elements are not sitting on the edge. */
-#root {
-  padding: 15px;
-}
-
-/* Allow backgrounds addons to dynamically load background */
-body {
-  background-color: transparent;
-}
