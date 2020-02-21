@@ -14,8 +14,97 @@ We include several predefined button styles, each serving its own semantic purpo
   <Story name="Default" height="100px">
   {`
     <button class="btn">Button</button>
-    <button class="btn btn--primary">Button</button>
-    <button class="btn btn--secondary">Button</button>
+    <button class="btn btn--primary">Primary Button</button>
+    <button class="btn btn--secondary">Secondary Button</button>
+  `}
+  </Story>
+</Preview>
+
+## Button tags
+
+The `.btn` classes are designed to be used with the `<button>` element. However, you can also use these classes on `<a>` or `<input>` elements (though some browsers may apply a slightly different rendering).
+
+When using button classes on `<a>` elements that are used to trigger in-page functionality (like collapsing content), rather than linking to new pages or sections within the current page, these links should be given a role="button" to appropriately convey their purpose to assistive technologies such as screen readers.
+
+## Sizes
+
+Add `.btn--lg` or `.btn--sm` for additional sizes.
+
+<Preview mdxSource={`
+  <button class="btn btn--lg">Button</button>
+  <button class="btn btn--primary btn--lg">Button</button>
+  <button class="btn btn--secondary btn--lg">Button</button>
+`}>
+  <Story name="Large" height="100px">
+  {`
+    <button class="btn btn--lg">Button</button>
+    <button class="btn btn--primary btn--lg">Button</button>
+    <button class="btn btn--secondary btn--lg">Button</button>
+  `}
+  </Story>
+</Preview>
+
+<Preview mdxSource={`
+  <button class="btn btn--sm">Button</button>
+  <button class="btn btn--primary btn--sm">Primary Button</button>
+  <button class="btn btn--secondary btn--sm">Secondary Button</button>
+`}>
+  <Story name="Small" height="100px">
+  {`
+    <button class="btn btn--sm">Button</button>
+    <button class="btn btn--primary btn--sm">Primary Button</button>
+    <button class="btn btn--secondary btn--sm">Secondary Button</button>
+  `}
+  </Story>
+</Preview>
+
+Create full-width block level buttons — those that span the full width of a parent—by adding `.btn--full-width`.
+
+<Preview mdxSource={`
+  <button class="btn btn--primary btn--full-width">Primary Button</button>
+  <button class="btn btn--secondary btn--full-width">Secondary Button</button>
+`}>
+  <Story name="Full Width" height="100px">
+  {`
+    <button class="btn btn--primary btn--full-width">Primary Button</button>
+    <button class="btn btn--secondary btn--full-width">Secondary Button</button>
+  `}
+  </Story>
+</Preview>
+
+## Disabled state
+
+Make buttons look inactive by adding the disabled boolean attribute to any `<button>` element.
+
+<Preview mdxSource={`
+  <button class="btn" disabled>Button</button>
+  <button class="btn btn--primary" disabled>Primary Button</button>
+  <button class="btn btn--secondary" disabled>Secondary Button</button>
+`}>
+  <Story name="Disabled" height="100px">
+  {`
+    <button class="btn" disabled>Button</button>
+    <button class="btn btn--primary" disabled>Primary Button</button>
+    <button class="btn btn--secondary" disabled>Secondary Button</button>
+  `}
+  </Story>
+</Preview>
+
+Make buttons look inactive by adding the disabled boolean attribute to any `<button>` element.
+
+Disabled buttons using the `<a>` element behave a bit different:
+
+- `<a>`s don’t support the disabled attribute, so you must add the `.btn--disabled` class to make it visually appear disabled.
+- Disabled buttons should include the aria-disabled="true" attribute to indicate the state of the element to assistive technologies.
+
+<Preview mdxSource={`
+  <a href="#" class="btn btn-primary btn--disabled" tabindex="-1" role="button" aria-disabled="true">Primary link</a>
+  <a href="#" class="btn btn-secondary btn--disabled" tabindex="-1" role="button" aria-disabled="true">Seconary Link</a>
+`}>
+  <Story name="Disabled Link" height="100px">
+  {`
+    <a href="#" class="btn btn-primary btn--disabled" tabindex="-1" role="button" aria-disabled="true">Primary link</a>
+    <a href="#" class="btn btn-secondary btn--disabled" tabindex="-1" role="button" aria-disabled="true">Seconary Link</a>
   `}
   </Story>
 </Preview>

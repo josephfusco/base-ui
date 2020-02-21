@@ -117,38 +117,38 @@ h6 {
 
 h1 {
   font-weight: 700;
-  font-size: 2rem;
-  line-height: 2rem;
+  font-size: $h1-font-size;
+  line-height: $h1-font-size;
 }
 
 h2 {
   font-weight: 700;
-  font-size: 1.5rem;
-  line-height: 1.5rem;
+  font-size: $h2-font-size;
+  line-height: $h2-font-size;
 }
 
 h3 {
   font-weight: 700;
-  font-size: 1.25rem;
-  line-height: 1.25rem;
+  font-size: $h3-font-size;
+  line-height: $h3-font-size;
 }
 
 h4 {
   font-weight: 700;
-  font-size: 1rem;
-  line-height: 1rem;
+  font-size: $h4-font-size;
+  line-height: $h4-font-size;
 }
 
 h5 {
   font-weight: 400;
-  font-size: 0.875rem;
-  line-height: 0.875rem;
+  font-size: $h5-font-size;
+  line-height: $h5-font-size;
 }
 
 h6 {
   font-weight: 400;
-  font-size: 0.675rem;
-  line-height: 0.675rem;
+  font-size: $h6-font-size;
+  line-height: $h6-font-size;
 }
 
 // Reset margins on paragraphs
@@ -287,7 +287,7 @@ pre,
 code,
 kbd,
 samp {
-  font-size: 14px; // Correct the odd `em` font sizing in all browsers.
+  font-size: inherit;
   font-family: $font-family-monospace;
 }
 
