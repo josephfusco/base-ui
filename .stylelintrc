@@ -6,6 +6,7 @@
   ],
   rules: {
     'scss/dollar-variable-colon-space-after': 'at-least-one-space',
+    'scss/media-feature-value-dollar-variable': 'never',
     'max-empty-lines': 2,
     'order/properties-order': [],
     'plugin/rational-order': [

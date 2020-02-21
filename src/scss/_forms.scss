@@ -17,6 +17,9 @@
   border-radius: 3px;
   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.15);
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  @media (prefers-reduced-motion: reduce) {
+    transition: none;
+  }
   -webkit-appearance: none;
 }
 
@@ -39,6 +42,9 @@
     backface-visibility: hidden;
     opacity: 0;
     transition: transform 0.25s, opacity 0.18s;
+    @media (prefers-reduced-motion: reduce) {
+      transition: none;
+    }
     pointer-events: none;
   }
 

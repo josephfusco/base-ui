@@ -1,0 +1,7 @@
+.visually-hidden {
+  @extend %visually-hidden;
+}
+
+.visually-hidden-unless-focused {
+  @extend %visually-hidden-unless-focused;
+}

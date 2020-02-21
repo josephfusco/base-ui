@@ -28,12 +28,13 @@
 ///
 @mixin visually-hidden-unless-focused {
   &:focus {
-    position: static;
+    position: static !important; // stylelint-disable-line declaration-no-important
     width: auto;
     height: auto;
     overflow: visible;
     white-space: normal;
     clip: auto;
+    clip-path: unset;
   }
 }
 
