@@ -2,9 +2,8 @@
   @extend h1;
 
   &.mega {
-    font-size: 48px;
-    line-height: 69px;
-    letter-spacing: -0.24px;
+    font-size: 2rem;
+    line-height: 2rem;
   }
 }
 
@@ -12,8 +11,8 @@
   @extend h2;
 
   &.mega {
-    font-size: 32px;
-    line-height: 45px;
+    font-size: 1.5rem;
+    line-height: 1.5rem;
   }
 }
 
@@ -27,12 +26,10 @@
 
 .h5 {
   @extend h5;
-  text-transform: uppercase;
 }
 
 .h6 {
   @extend h6;
-  text-transform: uppercase;
 }
 
 .blockquote {

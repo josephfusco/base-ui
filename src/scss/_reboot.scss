@@ -23,6 +23,17 @@ html {
   line-height: 1.15; // 3
   -webkit-text-size-adjust: 100%; // 4
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0); // 5
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+
+  // Set our fluid typography.
+  @include fluid-type(
+    font-size,
+    $fluid-type-min-screen,
+    $fluid-type-max-screen,
+    $fluid-type-min-font,
+    $fluid-type-max-font
+  );
 }
 
 // Shim for "new" HTML5 structural elements to display correctly (IE10, older browsers)
@@ -52,10 +63,8 @@ section {
 body {
   margin: 0; // 1
   color: var(--mdl-text-color);
-  font-weight: 400;
-  font-size: 14px;
   font-family: $font-family-base;
-  line-height: 1.8;
+  line-height: 1.5rem;
   text-align: left; // 3
   background-color: var(--mdl-bg-color); // 2
 }
@@ -108,38 +117,38 @@ h6 {
 
 h1 {
   font-weight: 700;
-  font-size: 36px;
-  line-height: 48px;
+  font-size: 2rem;
+  line-height: 2rem;
 }
 
 h2 {
   font-weight: 700;
-  font-size: 24px;
-  line-height: 33px;
+  font-size: 1.5rem;
+  line-height: 1.5rem;
 }
 
 h3 {
   font-weight: 700;
-  font-size: 18px;
-  line-height: 25px;
+  font-size: 1.25rem;
+  line-height: 1.25rem;
 }
 
 h4 {
   font-weight: 700;
-  font-size: 16px;
-  line-height: 22px;
+  font-size: 1rem;
+  line-height: 1rem;
 }
 
 h5 {
   font-weight: 400;
-  font-size: 14px;
-  line-height: 20px;
+  font-size: 0.875rem;
+  line-height: 0.875rem;
 }
 
 h6 {
   font-weight: 400;
-  font-size: 12px;
-  line-height: 17px;
+  font-size: 0.675rem;
+  line-height: 0.675rem;
 }
 
 // Reset margins on paragraphs

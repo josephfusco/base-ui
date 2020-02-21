@@ -1,0 +1,71 @@
+import { Preview, Story, Meta } from '@storybook/addon-docs/blocks';
+
+<Meta title="Components|Tile" />
+
+# Tile
+
+Tiles are containers that would hold icons and or text. Smaller than cards, tiles provide a way to **display content in a simple way**.
+
+<Preview mdxSource={`
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-3">
+        <div class="tile">
+          <div class="tile-body">
+            <h5 class="tile-title">Tile Title</h5>
+            <p class="tile-text">
+              This is a wider tile with supporting text below as a natural lead-in to additional
+              content. This content is a little bit longer.
+            </p>
+            <p class="tile-text"><small>Last updated 3 mins ago</small></p>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-3">
+        <div class="tile">
+          <div class="tile-body">
+            <h5 class="tile-title">Tile Title</h5>
+            <p class="tile-text">
+              This is a wider tile with supporting text below as a natural lead-in to additional
+              content. This content is a little bit longer.
+            </p>
+            <p class="tile-text"><small>Last updated 3 mins ago</small></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+`}>
+  <Story name="Default" height="275px">
+    {`
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-sm-3">
+            <div class="tile">
+              <div class="tile-body">
+                <h5 class="tile-title">Tile Title</h5>
+                <p class="tile-text">
+                  This is a wider tile with supporting text below as a natural lead-in to additional
+                  content. This content is a little bit longer.
+                </p>
+                <p class="tile-text"><small>Last updated 3 mins ago</small></p>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-3">
+            <div class="tile">
+              <div class="tile-body">
+                <h5 class="tile-title">Tile Title</h5>
+                <p class="tile-text">
+                  This is a wider tile with supporting text below as a natural lead-in to additional
+                  content. This content is a little bit longer.
+                </p>
+                <p class="tile-text"><small>Last updated 3 mins ago</small></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    `}
+  </Story>
+</Preview>

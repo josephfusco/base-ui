@@ -5,6 +5,20 @@ import { action } from '@storybook/addon-actions';
 
 # Typography
 
+<Preview mdxSource={`
+  <p>
+    Here is a paragraph containing a <a href="https://example.org">Link</a>.
+  </p>
+`}>
+  <Story name="General" height="250px">
+    {`
+      <p>
+        Here is a paragraph containing a <a href="https://example.org">Link</a>.
+      </p>
+    `}
+  </Story>
+</Preview>
+
 ## Headings
 
 These are basics that are used for internal and external projects. But, the external usage of this is driven by Marketing. As an example, H1s on MCom are different in size than in internal products. They share the same font family, but the size usage could be different.

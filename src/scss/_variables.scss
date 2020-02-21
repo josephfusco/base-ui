@@ -80,7 +80,7 @@ $root-css-vars: (
   --mdl-card-box-shadow: 0 2px 22px 0 rgba(0, 0, 0, 0.15),
   --mdl-card-color: var(--mdl-text-color),
   --mdl-image-overlay-color: $color-white,
-  --mdl-image-overlay-bg-color: rgba($color-night, 0.5)
+  --mdl-image-overlay-bg-color: rgba($color-night, 0.5),
 );
 
 // Dark Mode CSS Variables
@@ -88,13 +88,17 @@ $root-css-vars: (
 // Define our root CSS variables.
 
 $dark-mode-css-vars: (
-  --mdl-bg-color: $color-onyx
+  --mdl-bg-color: $color-onyx,
 );
 
 // Typography
 //
 // Define our font related vars.
 
+$fluid-type-min-screen: 20rem;
+$fluid-type-max-screen: 50rem;
+$fluid-type-min-font: 0.8rem;
+$fluid-type-max-font: 2rem;
 $font-url: 'https://cloud.typography.com/7038756/6738972/css/fonts.css';
 $font-family-base: 'Gotham SSm A', 'Gotham SSm B', -apple-system, BlinkMacSystemFont, 'Segoe UI',
   Helvetica, Arial, sans-serif;
@@ -110,7 +114,7 @@ $grid-breakpoints: (
   sm: 576px,
   md: 768px,
   lg: 992px,
-  xl: 1200px
+  xl: 1200px,
 );
 
 @include _assert-ascending($grid-breakpoints, '$grid-breakpoints');
@@ -124,7 +128,7 @@ $container-max-widths: (
   sm: 540px,
   md: 720px,
   lg: 960px,
-  xl: 1140px
+  xl: 1140px,
 );
 
 @include _assert-ascending($container-max-widths, '$container-max-widths');

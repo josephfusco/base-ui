@@ -1,0 +1,21 @@
+import { Preview, Story, Meta } from '@storybook/addon-docs/blocks';
+
+<Meta title="Components|Buttons" />
+
+# Buttons
+
+We include several predefined button styles, each serving its own semantic purpose, with a few extras thrown in for more control.
+
+<Preview mdxSource={`
+  <button class="btn">Button</button>
+  <button class="btn btn--primary">Button</button>
+  <button class="btn btn--secondary">Button</button>
+`}>
+  <Story name="Default" height="100px">
+  {`
+    <button class="btn">Button</button>
+    <button class="btn btn--primary">Button</button>
+    <button class="btn btn--secondary">Button</button>
+  `}
+  </Story>
+</Preview>
