@@ -26,3 +26,8 @@
   border: 1px dashed #c7c7c7;
   border-radius: 0.25rem;
 }
+
+// Add some padding to preview area to prevent box shadows getting chopped.
+#root {
+  padding: 0.5rem 1rem;
+}
