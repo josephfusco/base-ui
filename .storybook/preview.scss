@@ -16,6 +16,10 @@
   }
 }
 
+.sbdocs-h2 {
+  border-bottom: 0 !important; /* stylelint-disable-line declaration-no-important */
+}
+
 .mock-column-block {
   display: flex;
   align-items: center;
