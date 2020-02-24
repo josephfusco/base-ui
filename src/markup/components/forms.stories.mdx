@@ -1,0 +1,63 @@
+import { Preview, Story, Meta } from '@storybook/addon-docs/blocks';
+
+<Meta title="Components|Forms" />
+
+# Forms
+
+Examples and usage guidelines for form control styles, layout options, and custom components for creating a wide variety of forms.
+
+## Inputs
+
+<Preview mdxSource={`
+  <div class="form-group">
+    <label for="input-2">Label text</label>
+    <input id="input-2" type="text" class="form-control" placeholder="placeholder text">
+  </div>
+`}>
+  <Story name="Text Input" height="100px">
+    {`
+      <div class="form-group">
+        <label for="input-1">Label text</label>
+        <input id="input-1" type="text" class="form-control" placeholder="placeholder text">
+      </div>
+    `}
+  </Story>
+</Preview>
+
+<Preview mdxSource={`
+  <div class="form-group">
+    <label for="input-1">Label text</label>
+    <input id="input-1" type="number" class="form-control" placeholder="placeholder text">
+  </div>
+`}>
+  <Story name="Number Input" height="100px">
+    {`
+      <div class="form-group">
+        <label for="input-1">Label text</label>
+        <input id="input-1" type="number" class="form-control" placeholder="placeholder text">
+      </div>
+    `}
+  </Story>
+</Preview>
+
+## Floating Label
+
+<Preview mdxSource={`
+  <div class="form-group">
+    <div class="floating-label">
+      <input id="input-4" class="floating-label__input form-control" type="text" placeholder="placeholder text">
+      <label for="input-4" class="floating-label__label">First Name</label>
+    </div>
+  </div>
+`}>
+  <Story name="Input w/ Floating Label" height="100px">
+    {`
+      <div class="form-group">
+        <div class="floating-label">
+          <input id="input-4" class="floating-label__input form-control" type="text" placeholder="placeholder text">
+          <label for="input-4" class="floating-label__label">First Name</label>
+        </div>
+      </div>
+    `}
+  </Story>
+</Preview>
