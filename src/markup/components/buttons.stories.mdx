@@ -26,20 +26,38 @@ The `.btn` classes are designed to be used with the `<button>` element. However,
 
 When using button classes on `<a>` elements that are used to trigger in-page functionality (like collapsing content), rather than linking to new pages or sections within the current page, these links should be given a role="button" to appropriately convey their purpose to assistive technologies such as screen readers.
 
+<Preview mdxSource={`
+  <a class="btn btn--primary" href="#" role="button">Primary Link</a>
+  <button class="btn btn--primary" type="submit">Primary Button</button>
+  <input class="btn btn--primary" type="button" value="Primary Input">
+  <input class="btn btn--primary" type="submit" value="Primary Submit">
+  <input class="btn btn--primary" type="reset" value="Primary Reset">
+`}>
+  <Story name="Button Tags" height="100px">
+    {`
+      <a class="btn btn--primary" href="#" role="button">Primary Link</a>
+      <button class="btn btn--primary" type="submit">Primary Button</button>
+      <input class="btn btn--primary" type="button" value="Primary Input">
+      <input class="btn btn--primary" type="submit" value="Primary Submit">
+      <input class="btn btn--primary" type="reset" value="Primary Reset">
+    `}
+  </Story>
+</Preview>
+
 ## Sizes
 
 Add `.btn--lg` or `.btn--sm` for additional sizes.
 
 <Preview mdxSource={`
   <button class="btn btn--lg">Button</button>
-  <button class="btn btn--primary btn--lg">Button</button>
-  <button class="btn btn--secondary btn--lg">Button</button>
+  <button class="btn btn--primary btn--lg">Primary Button</button>
+  <button class="btn btn--secondary btn--lg">Secondary Button</button>
 `}>
   <Story name="Large" height="100px">
   {`
     <button class="btn btn--lg">Button</button>
-    <button class="btn btn--primary btn--lg">Button</button>
-    <button class="btn btn--secondary btn--lg">Button</button>
+    <button class="btn btn--primary btn--lg">Primary Button</button>
+    <button class="btn btn--secondary btn--lg">Secondary Button</button>
   `}
   </Story>
 </Preview>
@@ -77,15 +95,15 @@ Create full-width block level buttons — those that span the full width of a pa
 Make buttons look inactive by adding the disabled boolean attribute to any `<button>` element.
 
 <Preview mdxSource={`
-  <button class="btn" disabled>Button</button>
-  <button class="btn btn--primary" disabled>Primary Button</button>
-  <button class="btn btn--secondary" disabled>Secondary Button</button>
+  <button class="btn" disabled>Disabled Button</button>
+  <button class="btn btn--primary" disabled>Disabled Primary Button</button>
+  <button class="btn btn--secondary" disabled>Disabled Secondary Button</button>
 `}>
   <Story name="Disabled" height="100px">
   {`
-    <button class="btn" disabled>Button</button>
-    <button class="btn btn--primary" disabled>Primary Button</button>
-    <button class="btn btn--secondary" disabled>Secondary Button</button>
+    <button class="btn" disabled>Disabled Button</button>
+    <button class="btn btn--primary" disabled>Disabled Primary Button</button>
+    <button class="btn btn--secondary" disabled>Disabled Secondary Button</button>
   `}
   </Story>
 </Preview>
@@ -96,13 +114,15 @@ Disabled buttons using the `<a>` element behave a bit different:
 - Disabled buttons should include the aria-disabled="true" attribute to indicate the state of the element to assistive technologies.
 
 <Preview mdxSource={`
-  <a href="#" class="btn btn-primary btn--disabled" tabindex="-1" role="button" aria-disabled="true">Primary link</a>
-  <a href="#" class="btn btn-secondary btn--disabled" tabindex="-1" role="button" aria-disabled="true">Seconary Link</a>
+  <a href="#" class="btn btn--disabled" tabindex="-1" role="button" aria-disabled="true">Disabled Link</a>
+  <a href="#" class="btn btn--primary btn--disabled" tabindex="-1" role="button" aria-disabled="true">Disabled Primary Link</a>
+  <a href="#" class="btn btn--secondary btn--disabled" tabindex="-1" role="button" aria-disabled="true">Disabled Seconary Link</a>
 `}>
   <Story name="Disabled Link" height="100px">
   {`
-    <a href="#" class="btn btn-primary btn--disabled" tabindex="-1" role="button" aria-disabled="true">Primary link</a>
-    <a href="#" class="btn btn-secondary btn--disabled" tabindex="-1" role="button" aria-disabled="true">Seconary Link</a>
+    <a href="#" class="btn btn--disabled" tabindex="-1" role="button" aria-disabled="true">Disabled Link</a>
+    <a href="#" class="btn btn--primary btn--disabled" tabindex="-1" role="button" aria-disabled="true">Disabled Primary Link</a>
+    <a href="#" class="btn btn--secondary btn--disabled" tabindex="-1" role="button" aria-disabled="true">Disabled Seconary Link</a>
   `}
   </Story>
 </Preview>
