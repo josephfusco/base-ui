@@ -61,5 +61,8 @@
   "engines": {
     "node": ">=8",
     "npm": ">=5"
+  },
+  "dependencies": {
+    "storybook-dark-mode": "^0.3.0"
   }
 }
